@@ -5,26 +5,28 @@ single-header file library.
 
 Exmaple usage:
 
-	Bayazit::Polygon poly;
-	poly.push_back(Bayazit::Point(20, -30));
-	poly.push_back(Bayazit::Point(10, -10));
-	poly.push_back(Bayazit::Point(30, -20));
-	poly.push_back(Bayazit::Point(30, 20));
-	poly.push_back(Bayazit::Point(10, 10));
-	poly.push_back(Bayazit::Point(20, 30));
-	poly.push_back(Bayazit::Point(-20, 30));
-	poly.push_back(Bayazit::Point(-10, 10));
-	poly.push_back(Bayazit::Point(-30, 20));
-	poly.push_back(Bayazit::Point(-30, -20));
-	poly.push_back(Bayazit::Point(-10, -10));
-	poly.push_back(Bayazit::Point(-20, -30));
+```C++
+Bayazit::Polygon poly;
+poly.push_back(Bayazit::Point(20, -30));
+poly.push_back(Bayazit::Point(10, -10));
+poly.push_back(Bayazit::Point(30, -20));
+poly.push_back(Bayazit::Point(30, 20));
+poly.push_back(Bayazit::Point(10, 10));
+poly.push_back(Bayazit::Point(20, 30));
+poly.push_back(Bayazit::Point(-20, 30));
+poly.push_back(Bayazit::Point(-10, 10));
+poly.push_back(Bayazit::Point(-30, 20));
+poly.push_back(Bayazit::Point(-30, -20));
+poly.push_back(Bayazit::Point(-10, -10));
+poly.push_back(Bayazit::Point(-20, -30));
 
-	Bayazit::Decomposer dec;
-	auto polys = dec.Decompose(poly);
+Bayazit::Decomposer dec;
+auto polys = dec.Decompose(poly);
 
-	for (auto p : polys)
-	{
-		printf("poly: (%d points)\n", p.size());
-		for (auto v : p)
-			printf("  %f %f\n", v.x, v.y);
-	}
+for (auto p : polys)
+{
+	printf("poly: (%d points)\n", p.size());
+	for (auto v : p)
+		printf("  %f %f\n", v.x, v.y);
+}
+```
